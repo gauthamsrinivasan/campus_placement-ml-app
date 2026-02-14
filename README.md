@@ -19,7 +19,7 @@ The model aims to help educational institutions and students understand the key 
 **Problem Type:** Binary Classification
 
 ### Dataset Characteristics
-- **Total Instances:** 1,604 students
+- **Total Instances:** 1,00,000 students
 - **Total Input Features:** 21
 - **Target Variable:** `placed` (Binary: 1 = Placed, 0 = Not Placed)
 - **Missing Values:** Handled appropriately during preprocessing
