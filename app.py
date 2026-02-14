@@ -97,7 +97,14 @@ st.markdown("""
 # --------------------------------------------------
 @st.cache_data
 def load_default_data():
-    return pd.read_csv("data/campus_placement.csv")
+    try:
+        return pd.read_csv("data/campus_placement.csv")
+    except FileNotFoundError:
+        st.error("❌ Error: data/campus_placement.csv not found. Please ensure the data folder is uploaded to GitHub.")
+        st.stop()
+    except Exception as e:
+        st.error(f"❌ Error loading data: {str(e)}")
+        st.stop()
 
 # --------------------------------------------------
 # PREPROCESS DATA FUNCTION
